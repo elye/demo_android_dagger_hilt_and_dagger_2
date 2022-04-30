@@ -20,10 +20,6 @@ interface MainActComponent {
 
     @Subcomponent.Builder
     interface Builder {
-        // The below module injection API is option if the
-        // ChildModule doesn't take parameter.
-        // But it is required if the Child module need to have
-        // parameter
         fun mainActModule(module: MainActModule): Builder
         fun build(): MainActComponent
     }

@@ -20,4 +20,11 @@ class MainAppModule(private val application: Application) {
     @Singleton
     @Provides @Named("Application")
     fun context(): Context = application
+
+    @Singleton
+    @Provides
+    fun provideMainAppDependency() : MainAppDependencyInterface =
+        object: MainAppDependencyInterface {}
 }
+
+interface MainAppDependencyInterface

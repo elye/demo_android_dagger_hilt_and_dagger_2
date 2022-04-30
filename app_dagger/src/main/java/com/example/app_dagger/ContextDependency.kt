@@ -4,6 +4,7 @@ import android.content.Context
 import javax.inject.Inject
 import javax.inject.Named
 
+@ActivityScope
 class ContextDependency @Inject constructor(
     @Named("Application") val appContext: Context,
     @Named("Activity") val actContext: Context

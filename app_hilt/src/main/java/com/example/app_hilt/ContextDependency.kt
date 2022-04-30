@@ -3,9 +3,10 @@ package com.example.app_hilt
 import android.content.Context
 import dagger.hilt.android.qualifiers.ActivityContext
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
-import javax.inject.Named
 
+@ActivityScoped
 class ContextDependency @Inject constructor(
     @ApplicationContext val appContext: Context,
     @ActivityContext val actContext: Context
