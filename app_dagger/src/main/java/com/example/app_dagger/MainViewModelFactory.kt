@@ -14,8 +14,11 @@ class MainViewModelFactory(
     override fun <T : ViewModel> create(
         key: String, modelClass: Class<T>, handle: SavedStateHandle
     ): T {
+        val dependency = MainApplication.daggerAppComponent.mainViewModelComponent.viewModelDependency
         return MainViewModel(
-            mainAppDependencyInterface, handle
+            mainAppDependencyInterface,
+            dependency,
+            handle
         ) as T
     }
 }

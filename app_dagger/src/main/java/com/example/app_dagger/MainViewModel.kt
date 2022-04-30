@@ -7,12 +7,15 @@ import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
     private val mainAppDependencyInterface: MainAppDependencyInterface,
+    private val viewModelDependency: ViewModelDependency,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
     init {
-        Log.d("TrackMe", "ViewModel\n$mainAppDependencyInterface")
+        Log.d("TrackMe", "ViewModel Initialize\n$mainAppDependencyInterface\n$viewModelDependency")
     }
 
-    fun doSomething() {}
+    fun doSomething() {
+        Log.d("TrackMe", "ViewModel Running\n$mainAppDependencyInterface\n$viewModelDependency")
+    }
 }

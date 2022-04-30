@@ -12,6 +12,7 @@ import javax.inject.Singleton
 @Component(modules = [MainAppModule::class])
 interface MainAppComponent {
     val mainActComponentBuilder : MainActComponent.Builder
+    val mainViewModelComponent : MainViewModelComponent
 }
 
 @Module
